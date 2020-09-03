@@ -241,7 +241,7 @@ template<> struct atomic_selector<8> {
         #include "machine/linux_ia64.h"
     #elif __powerpc__
         #include "machine/mac_ppc.h"
-    #elif __ARM_ARCH_7A__ || __aarch64__
+    #elif __ARM_ARCH_7A__ || __aarch64__ || __gptx__
         #include "machine/gcc_arm.h"
     #elif __TBB_GCC_BUILTIN_ATOMICS_PRESENT
         #include "machine/gcc_generic.h"

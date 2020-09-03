@@ -202,7 +202,7 @@ namespace internal {
 #define __TBB_USE_GENERIC_HALF_FENCED_LOAD_STORE                1
 #define __TBB_USE_GENERIC_DWORD_LOAD_STORE                      1
 #define __TBB_USE_GENERIC_SEQUENTIAL_CONSISTENCY_LOAD_STORE     1
-#elif defined __aarch64__
+#elif defined(__aarch64__) || defined(__gptx__)
 // Generic gcc implementations are fine for ARMv8-a except __TBB_PAUSE.
 #include "gcc_generic.h"
 #else
